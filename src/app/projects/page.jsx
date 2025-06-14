@@ -12,7 +12,7 @@ export default function page() {
     <div className='container'>
       <h1 className='text-4xl font-bold text-center bg-[radial-gradient(ellipse_at_center,_var(--primary))] from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text'>Projects</h1>
 
-      <div className='grid grid-cols-1 justify-center items-center mt-10 gap-4 space-y-10'>
+      <div className='grid grid-cols-1 md:grid-cols-3 justify-center items-center mt-10 gap-4 space-y-10'>
         {projects.map((project) => (
           <div key={project.id} className=''>
             <Image src={project.image} alt={project.name} width={100} height={100} className='w-full h-full object-cover' />

@@ -1,12 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ArrowBigRight, ArrowRight } from "lucide-react";
+import {  ArrowRight } from "lucide-react";
 
 export default function Contact() {
   useEffect(() => {
@@ -34,7 +31,7 @@ export default function Contact() {
         </div>
           <div data-aos="fade-up-left" className="bg-background p-5 rounded-md">
             <form action="">
-              <div data-aos="flip-up" className="space-y-4">
+              <div  className="space-y-4">
                 <div className="relative z-0">
                   <input
                     type="text"
@@ -50,7 +47,7 @@ export default function Contact() {
                   </label>
                 </div>
 
-                <div data-aos="flip-up" className="relative z-0">
+                <div  className="relative z-0">
                   <input
                     type="email"
                     id="email"
@@ -64,7 +61,7 @@ export default function Contact() {
                     Email
                   </label>
                 </div>
-                <div data-aos="flip-up" className="relative z-0">
+                <div  className="relative z-0">
                   <textarea
                     type="text"
                     id="name"

@@ -1,27 +1,9 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerClose,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { projects } from "../project";
+
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import {
-  ArrowRight,
   Briefcase,
-  Brain,
   NotebookPen,
   Phone,
   User,
@@ -31,14 +13,10 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 export default function MobileNavigation() {
-  const router = useRouter();
 
   const scrollToSection = (sectionId) => {
     // if(router.pathname !== "/") {
