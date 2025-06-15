@@ -1,31 +1,4 @@
-import React, { useEffect } from "react";
-import { ArrowRight } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { SkillData } from "../SkillData";
-import Image from "next/image";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-
-export default function Skills() {
-  console.log(SkillData);
-
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  });
-
-  return (
-    <>
-      <div className=" max-w-[1200px] mx-auto" id="skills">
-        {/* <SkillsCard /> */}
-        <div className="bg-white rounded-xl">
-          <AnimatedTestimonialsDemo className="" />
-        </div>
-      </div>
-    </>
-  );
-}
 
 export function AnimatedTestimonialsDemo() {
   const testimonial = [

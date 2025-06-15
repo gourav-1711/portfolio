@@ -26,7 +26,7 @@ export default function Banner() {
             <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly  relative h-auto w-full ">
               <CardItem
                 data-aos="fade-right"
-                className="text-xl font-bold text-black px-5 md:px-16"
+                className="text-xl font-bold text-black px-5 "
               >
                 {/* name */}
                 <div className="">
@@ -48,7 +48,7 @@ export default function Banner() {
                     <span
                       data-aos="fade-right"
                       data-aos-duration="1100"
-                      className=" text-[29px] md:text-4xl"
+                      className=" text-[29px] md:text-4xl linear-wipe"
                     >
                       A Frontend
                     </span>
@@ -62,6 +62,12 @@ export default function Banner() {
                   </h4>
                 </div>
 
+                {/* description */}
+                <div className="mt-4">
+                  <p data-aos="zoom-out-left"  data-aos-duration="900" className="text-[14px] italic font-medium text-gray-700 text-justify">
+                  Hi! I’m Gaurav, a passionate Frontend Developer dedicated to crafting visually appealing and highly responsive web experiences. I specialize in modern technologies like React, Next.js, Tailwind CSS, JavaScript, and more. Currently, I'm diving deeper into the backend world to become a full-stack developer.
+                  </p>
+                </div>
                 {/* skilled in */}
                 <div className="flex flex-col  rounded-md mt-4  justify-center  gap-3 ">
                   <h6 className="flex items-center ">
