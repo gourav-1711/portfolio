@@ -18,7 +18,7 @@ export default function Contact() {
         data-aos="fade-up-right"
         data-aos-anchor-placement="top"
         id="contact"
-        className="container p-4 w-[100%]  grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="container p-4 w-[100%] my-10 grid grid-cols-1 md:grid-cols-2 gap-4"
       >
         <div
           data-aos="fade-up-right"

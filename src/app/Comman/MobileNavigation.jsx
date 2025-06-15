@@ -17,20 +17,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function MobileNavigation() {
-
   const scrollToSection = (sectionId) => {
-    // if(router.pathname !== "/") {
-    //   router.push("/")
-    //   scroll:false
-    // }
+    
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
- 
-
 
   return (
     <>
@@ -39,8 +32,10 @@ export default function MobileNavigation() {
           <Menu />
         </DropdownMenuTrigger>
         <DropdownMenuContent
+          sideOffset={10}
+          align={"center"}
           className={
-            "bg-background/40 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-400  shadow-xl rounded-md flex justify-center items-center w-fit "
+            "bg-foreground/70 rounded-md flex justify-center items-center w-fit "
           }
         >
           <div className="grid grid-cols-1 gap-1 xsm:gap-2 w-fit">
@@ -48,49 +43,45 @@ export default function MobileNavigation() {
             <Link
               href="/#about"
               onClick={() => scrollToSection("about")}
-              className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card "
+              className="cursor-pointer  text-background rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm  "
             >
-             
-              <span className="text-foreground">
+              <span className="">
                 <User size={18} />
               </span>
-              <span className="text-foreground ">About</span>
+              <span className=" ">About</span>
             </Link>
 
             {/* skills */}
             <Link
               href="/#skills"
               onClick={() => scrollToSection("skills")}
-              className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card"
+              className="cursor-pointer  text-background rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm "
             >
-             
-              <span className="text-foreground">
+              <span className="">
                 <NotebookPen size={18} />
               </span>
-              <span className="text-foreground ">Skills</span>
+              <span className=" ">Skills</span>
             </Link>
             {/* projects */}
             <Link
               href="/projects"
-              className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-evenly lg:justify-center text-sm card"
+              className="cursor-pointer  text-background rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-evenly lg:justify-center text-sm "
             >
-             
-              <span className="text-foreground">
+              <span className="">
                 <Briefcase size={18} />
               </span>
-              <span className="text-foreground ">Projects</span>
+              <span className=" ">Projects</span>
             </Link>
             {/* contact */}
             <Link
               href="/#contact"
               onClick={() => scrollToSection("contact")}
-              className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card"
+              className="cursor-pointer  text-background rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm "
             >
-             
-              <span className="text-foreground">
+              <span className="">
                 <Phone size={18} />
               </span>
-              <span className="text-foreground ">Contact</span>
+              <span className=" ">Contact</span>
             </Link>
             {/* linkedin */}
             <div className="   ">
@@ -102,10 +93,10 @@ export default function MobileNavigation() {
                 }}
                 // href={"https://www.linkedin.com/in/gaurav-dadhich-92a571353/?trk=opento_sprofile_topcard"}
 
-                className="rounded-full bg-transparent p-1 sm:p-2 h-auto hover:bg-background/50 click hover:text-foreground duration-200 flex flex-col justify-center items-center"
+                className="rounded-full  p-1 sm:p-2 h-auto  click text-background duration-200 flex flex-col justify-center items-center"
               >
                 <LinkedinIcon size={20} className="" />
-                <span className="text-foreground text-sm ">Linkedin</span>
+                <span className=" text-sm ">Linkedin</span>
               </div>
             </div>
           </div>

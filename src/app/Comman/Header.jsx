@@ -24,7 +24,7 @@ export default function Header() {
       >
         <nav
           data-aos="fade-down"
-          className="sticky top-0 grid grid-cols-[20%_auto] sm:grid-cols-[15%_auto_15%] justify-between  px-4 py-1 items-center w-[99%] xsm:w-[90%] md:w-[65%] lg:w-[50%]  mx-auto rounded-full bg-background/40 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-400  shadow-xl "
+          className="sticky top-10 grid grid-cols-[20%_auto] sm:grid-cols-[15%_auto_15%] justify-between  px-4 py-1 items-center w-[99%] xsm:w-[90%] md:w-[65%] lg:w-[50%]  mx-auto rounded-full bg-background/40 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-400  shadow-xl "
         >
           {/* home */}
           <div className="border-r border-foreground  pr-2 justify-self-start">

@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ArrowBigDown, ArrowDown } from "lucide-react";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import Image from "next/image";
 
 export default function Banner() {
   useEffect(() => {
@@ -18,55 +19,88 @@ export default function Banner() {
       <div
         data-aos="fade-up"
         id="about"
-        className="w-full mb-10 max-w-[95vw] mx-auto "
+        className="w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
       >
-        <CardContainer className=" inter-var w-full">
+        <CardContainer className=" inter-var w-full h-full">
           <CardBody className="block bg-gray-50 relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly  relative h-auto w-full ">
-              <CardItem className="text-xl font-bold text-neutral-600 dark:text-white px-16">
+              <CardItem
+                data-aos="fade-right"
+                className="text-xl font-bold text-black px-5 md:px-16"
+              >
+                {/* name */}
                 <div className="">
-                  <h2 className="text-4xl flex gap-3">
+                  <h2 className="text-5xl md:text-7xl text-left flex gap-3">
                     <span className="">Hi</span>
                     <span>I'm </span>
-                    <span >Gaurav</span>
+                    <span
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                      className="from-blue-300 via-blue-400 to-blue-600  bg-gradient-to-b bg-clip-text text-transparent"
+                    >
+                      Gaurav
+                    </span>
                   </h2>
                 </div>
-
-                <div className="">
-                  <h4
-                    data-aos="fade-right"
-                    className="heading flex items-center justify-center gap-5 "
-                  >
-                    <span>
+                {/* developer */}
+                <div className="mt-4">
+                  <h4 className="heading flex items-center  font-medium gap-1 md:gap-2 text-5xl">
+                    <span
+                      data-aos="fade-right"
+                      data-aos-duration="1100"
+                      className=" text-[29px] md:text-4xl"
+                    >
                       A Frontend
-                      <span className="text-primary ms-2">Developer</span>
+                    </span>
+                    <span
+                      data-aos="fade-left"
+                      data-aos-duration="1100"
+                      className="text-primary ms-2 linear-wipe  text-[29px] md:text-4xl"
+                    >
+                      Developer
                     </span>
                   </h4>
                 </div>
 
-                <div className="flex flex-col  rounded-md mt-4 p-4 justify-center items-center gap-3 ">
+                {/* skilled in */}
+                <div className="flex flex-col  rounded-md mt-4  justify-center  gap-3 ">
                   <h6 className="flex items-center ">
-                    <span className="text-2xl from-gray-600 via-black to-blue-600 bg-gradient-to-b bg-clip-text text-transparent">Skilled In</span>
+                    <span
+                      data-aos="fade-up-left"
+                      data-aos-duration="1200"
+                      className="text-3xl md:text-4xl from-gray-600 via-black to-blue-600 bg-gradient-to-b bg-clip-text text-transparent"
+                    >
+                      Skilled In
+                      
+                    </span>
                     <span>
-                      <ArrowDown />
+                      <ArrowDown size={40} />
                     </span>
                   </h6>
-                  <ContainerTextFlip
-                    className=" card "
-                    words={["Next.js", "React", "Tailwind", "Animations"]}
-                  ></ContainerTextFlip>
+                  <div
+                    className=""
+                    data-aos="fade-up-right"
+                    data-aos-duration="1200"
+                  >
+                    <ContainerTextFlip
+                      className=" card "
+                      words={["Next.js", "React", "Tailwind", "Animations"]}
+                    ></ContainerTextFlip>
+                  </div>
                 </div>
               </CardItem>
 
-              <CardItem className="w-full mt-4 group ">
+              <CardItem translateZ={50} className="w-full mt-4 group ">
                 <div className="relative ">
                   <div className="absolute  "></div>
                   <div className="relative flex  items-center justify-center rounded-lg">
-                    <img
-                      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <Image
+                      data-aos="zoom-in-up"
+                      data-aos-duration="1500"
+                      src="/img/banner.webp"
                       height="1000"
                       width="1000"
-                      className=" w-full object-cover rounded-xl group-hover:shadow-xl shadow-2xl shadow-gradient   "
+                      className=" w-[80%] md:w-[70%] object-cover rounded-full group-hover:shadow-xl shadow-2xl    "
                       alt="thumbnail"
                     />
                   </div>
