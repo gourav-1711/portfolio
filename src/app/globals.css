@@ -184,7 +184,7 @@ input:-webkit-autofill:active {
 
 /* reusable css */
 .container {
-  @apply max-w-7xl mx-auto px-4 px-2 sm:px-6 lg:px-8 py-2 md:py-3;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-3;
 }
 .heading {
   @apply text-2xl font-bold;

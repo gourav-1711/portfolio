@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import { ArrowBigDown, ArrowDown } from "lucide-react";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import Image from "next/image";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Banner() {
   useEffect(() => {
@@ -18,14 +19,16 @@ export default function Banner() {
     <>
       <div
         data-aos="fade-up"
+        data-aos-duration="1100"
         id="about"
-        className="w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
+        className=" w-[95%] md:w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
       >
         <CardContainer className=" inter-var w-full h-full">
-          <CardBody className="block bg-gray-50 relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">
+          <CardBody className="block bg-background relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly  relative h-auto w-full ">
               <CardItem
                 data-aos="fade-right"
+                data-aos-duration="1100"
                 className="text-xl font-bold text-black px-5 "
               >
                 {/* name */}
@@ -35,7 +38,7 @@ export default function Banner() {
                     <span>I'm </span>
                     <span
                       data-aos="fade-down"
-                      data-aos-duration="1000"
+                      data-aos-duration="1100"
                       className="from-blue-300 via-blue-400 to-blue-600  bg-gradient-to-b bg-clip-text text-transparent"
                     >
                       Gaurav
@@ -43,20 +46,16 @@ export default function Banner() {
                   </h2>
                 </div>
                 {/* developer */}
-                <div className="mt-4">
+                <div
+                  data-aos-duration="1400"
+                  data-aos="fade-left"
+                  className="mt-4"
+                >
                   <h4 className="heading flex items-center  font-medium gap-1 md:gap-2 text-5xl">
-                    <span
-                      data-aos="fade-right"
-                      data-aos-duration="1100"
-                      className=" text-[29px] md:text-4xl linear-wipe"
-                    >
+                    <span className=" text-[29px] md:text-4xl linear-wipe">
                       A Frontend
                     </span>
-                    <span
-                      data-aos="fade-left"
-                      data-aos-duration="1100"
-                      className="text-primary ms-2 linear-wipe  text-[29px] md:text-4xl"
-                    >
+                    <span className="text-primary ms-2 linear-wipe  text-[29px] md:text-4xl">
                       Developer
                     </span>
                   </h4>
@@ -64,20 +63,19 @@ export default function Banner() {
 
                 {/* description */}
                 <div className="mt-4">
-                  <p data-aos="zoom-out-left"  data-aos-duration="900" className="text-[14px] italic font-medium text-gray-700 text-justify">
-                  Hi! I’m Gaurav, a passionate Frontend Developer dedicated to crafting visually appealing and highly responsive web experiences. I specialize in modern technologies like React, Next.js, Tailwind CSS, JavaScript, and more. Currently, I'm diving deeper into the backend world to become a full-stack developer.
+                  <p className="text-[14px] italic font-medium text-gray-700 text-justify">
+                    <TextGenerateEffectDemo />
                   </p>
                 </div>
                 {/* skilled in */}
-                <div className="flex flex-col  rounded-md mt-4  justify-center  gap-3 ">
+                <div
+                  data-aos="fade-up-left"
+                  data-aos-duration="1200"
+                  className="flex flex-col  rounded-md mt-4  justify-center  gap-3 "
+                >
                   <h6 className="flex items-center ">
-                    <span
-                      data-aos="fade-up-left"
-                      data-aos-duration="1200"
-                      className="text-3xl md:text-4xl from-gray-600 via-black to-blue-600 bg-gradient-to-b bg-clip-text text-transparent"
-                    >
+                    <span className="text-3xl md:text-4xl from-gray-600 via-black to-blue-600 bg-gradient-to-b bg-clip-text text-transparent">
                       Skilled In
-                      
                     </span>
                     <span>
                       <ArrowDown size={40} />
@@ -117,5 +115,17 @@ export default function Banner() {
         </CardContainer>
       </div>
     </>
+  );
+}
+
+function TextGenerateEffectDemo() {
+  const word =
+    " A passionate Frontend Developer dedicated to crafting visually appealing and highly responsive web experiences. I specialize in modern technologies like React, Next.js, Tailwind CSS, JavaScript, and more. Currently, I'm diving deeper into the backend world to become a full-stack developer.";
+
+  return (
+    <TextGenerateEffect
+      className="text-[14px] italic font-medium text-gray-700 "
+      words={word}
+    />
   );
 }

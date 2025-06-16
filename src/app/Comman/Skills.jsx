@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { SkillData } from "../SkillData";
@@ -17,7 +16,12 @@ export default function Skills() {
 
   return (
     <>
-      <div className=" max-w-[1200px] mx-auto" id="skills">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1100"
+        className=" container"
+        id="skills"
+      >
         {/* <SkillsCard /> */}
         <div className="bg-white rounded-xl">
           <AnimatedTestimonialsDemo className="" />
@@ -31,38 +35,53 @@ export function AnimatedTestimonialsDemo() {
   const testimonial = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "I have hands-on experience with Next.js for frontend development, using it to build fast, SEO-friendly, and scalable web applications.",
+      name: "Next.Js",
+      designation: "A FullStack React FrameWork",
+      src: "/img/skills/nextjs.svg",
+      invert: true,
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Proficient in React for building dynamic and responsive user interfaces using components, hooks, and state management.",
+      name: "React Js",
+      designation: "A JavaScript Library",
+      src: "/img/skills/React.png",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Strong understanding of JavaScript, including ES6+, DOM manipulation, and asynchronous programming.",
+      name: "Java Script",
+      designation: "A Programming Language Built To Make Website",
+      src: "/img/skills/Java-Script.png",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Advanced in Tailwind CSS, skilled at building fully responsive and customizable UI with utility-first approach.",
+      name: "Tailwind",
+      designation: "A Utility Css Framwork",
+      src: "/img/skills/Tailwind.png",
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Proficient in Bootstrap for creating responsive and mobile-first web designs efficiently.",
+      name: "Bootstrap",
+      designation: "A HTML , Css , JS Library",
+      src: "/img/skills/bootstrap.png",
+    },
+    {
+      quote:
+        "Advanced in CSS, with in-depth knowledge of layouts , animations, transitions, and creating responsive, cross-browser compatible designs.",
+      name: "Css",
+      designation: "CSS is a language used to style and layout web pages.",
+      src: "/img/skills/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent.png",
+    },
+    {
+      quote:
+        "Advanced in HTML with strong knowledge of semantic tags, accessibility, and SEO-friendly structure.",
+      name: "HTML",
+      designation: "HTML is used to create and structure the web.",
+      src: "/img/skills/HTMl.png",
     },
   ];
   return <AnimatedTestimonials testimonials={testimonial} />;

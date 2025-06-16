@@ -1,13 +1,12 @@
-"use client";;
+"use client";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-export const AnimatedTestimonials = ({
-  testimonials,
-  autoplay = false
-}) => {
+export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
   const [active, setActive] = useState(0);
 
   const handleNext = () => {
@@ -32,15 +31,25 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
   return (
-    <div
-      className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+    <div className="mx-auto  px-4 py-10 md:py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+      <div className="relative grid grid-cols-1 gap-10 md:gap-20 md:grid-cols-2">
         <div>
-          <div className="relative h-80 w-full">
+          <div
+            data-aos="fade-up-right"
+            data-aos-duration="1200"
+            className="relative h-80 w-[85%] mx-auto md:w-full px-12 md:px-1"
+          >
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
+                  
                   key={testimonial.src}
                   initial={{
                     opacity: 0,
@@ -68,20 +77,28 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom">
-                  <img
+                  className="absolute inset-0 origin-bottom bg-foreground rounded-3xl p-16"
+                >
+                  <Image
                     src={testimonial.src}
                     alt={testimonial.name}
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center" />
+                    className={`h-full w-full rounded-3xl   ${
+                      testimonial.invert ? "invert-100" : ""
+                    }`}
+                  />
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col justify-between py-4">
+        <div
+          data-aos="fade-up-left"
+          data-aos-duration="1200"
+          className="flex flex-col justify-between py-4"
+        >
           <motion.div
             key={active}
             initial={{
@@ -99,7 +116,8 @@ export const AnimatedTestimonials = ({
             transition={{
               duration: 0.2,
               ease: "easeInOut",
-            }}>
+            }}
+          >
             <h3 className="text-2xl font-bold text-black dark:text-white">
               {testimonials[active].name}
             </h3>
@@ -125,7 +143,8 @@ export const AnimatedTestimonials = ({
                     ease: "easeInOut",
                     delay: 0.02 * index,
                   }}
-                  className="inline-block">
+                  className="inline-block"
+                >
                   {word}&nbsp;
                 </motion.span>
               ))}
@@ -134,15 +153,15 @@ export const AnimatedTestimonials = ({
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
-              <IconArrowLeft
-                className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+            >
+              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
-              <IconArrowRight
-                className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+            >
+              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
           </div>
         </div>
