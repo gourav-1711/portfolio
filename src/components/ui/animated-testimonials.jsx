@@ -49,7 +49,6 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  
                   key={testimonial.src}
                   initial={{
                     opacity: 0,
@@ -77,7 +76,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom bg-foreground rounded-3xl p-16"
+                  className="absolute inset-0 origin-bottom bg-gradient-to-r from-[#0f172a]  to-[#334155]  rounded-3xl p-16"
                 >
                   <Image
                     src={testimonial.src}
@@ -85,7 +84,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     width={500}
                     height={500}
                     draggable={false}
-                    className={`h-full w-full rounded-3xl   ${
+                    className={`h-full w-full rounded-3xl object-contain  ${
                       testimonial.invert ? "invert-100" : ""
                     }`}
                   />

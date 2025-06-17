@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { SkillData } from "../SkillData";
 import Image from "next/image";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { ArrowRight } from "lucide-react";
 
 export default function Skills() {
-  console.log(SkillData);
 
   useEffect(() => {
     AOS.init({
@@ -24,6 +23,16 @@ export default function Skills() {
       >
         {/* <SkillsCard /> */}
         <div className="bg-white rounded-xl">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            className="flex  items-center justify-center"
+          >
+            <h2 className="text-4xl font-bold pt-3">My Skills</h2>
+            <span>
+              <ArrowRight strokeWidth={2.25} size={36} />
+            </span>
+          </div>
           <AnimatedTestimonialsDemo className="" />
         </div>
       </div>

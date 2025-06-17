@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ArrowBigDown, ArrowDown } from "lucide-react";
+import {  ArrowDown } from "lucide-react";
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -25,7 +25,7 @@ export default function Banner() {
       >
         <CardContainer className=" inter-var w-full h-full">
           <CardBody className="block bg-background relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly  relative h-auto w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-[55%_auto] lg:grid-cols-2 justify-evenly  relative h-auto w-full ">
               <CardItem
                 data-aos="fade-right"
                 data-aos-duration="1100"
@@ -97,14 +97,14 @@ export default function Banner() {
               <CardItem translateZ={50} className="w-full mt-4 group ">
                 <div className="relative ">
                   <div className="absolute  "></div>
-                  <div className="relative flex  items-center justify-center rounded-lg">
+                  <div className="relative flex  items-center justify-center md:justify-end lg:justify-center rounded-lg">
                     <Image
                       data-aos="zoom-in-up"
                       data-aos-duration="1500"
                       src="/img/banner.webp"
                       height="1000"
                       width="1000"
-                      className=" w-[80%] md:w-[70%] object-cover rounded-full group-hover:shadow-xl shadow-2xl    "
+                      className=" w-[80%] md:[75%] lg:w-[70%] object-cover rounded-full group-hover:shadow-xl shadow-2xl    "
                       alt="thumbnail"
                     />
                   </div>
