@@ -54,7 +54,7 @@ export default function Navigation() {
          href="/#about"
          ref={(el) => (cardRefs.current[1] = el)}
           onClick={() => scrollToSection("about")}
-          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card "
+          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-2xl lg:rounded-full sm:px-10 sm:py-0 lg:px-2 lg:py-2 flex flex-row items-center gap-2 justify-center text-sm card "
         >
           <div className="glow"></div>
           <span className="text-foreground">
@@ -68,7 +68,7 @@ export default function Navigation() {
          href="/#skills"
          ref={(el) => (cardRefs.current[2] = el)}
           onClick={() => scrollToSection("skills")}
-          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card"
+          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full sm:px-10 sm:py-0 lg:px-2 lg:py-2 flex flex-row items-center gap-2 justify-center text-sm card"
         >
           <div className="glow"></div>
           <span className="text-foreground">
@@ -80,7 +80,7 @@ export default function Navigation() {
         <Link
          ref={(el) => (cardRefs.current[3] = el)}
           href="/projects"
-          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-evenly lg:justify-center text-sm card"
+          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full sm:px-1 sm:py-0 lg:px-2 lg:py-2 flex flex-row items-center gap-2 justify-evenly lg:justify-center text-sm card"
         >
           <div className="glow"></div>
           <span className="text-foreground">
@@ -93,7 +93,7 @@ export default function Navigation() {
          href="/#contact"
          ref={(el) => (cardRefs.current[4] = el)}
           onClick={() => scrollToSection("contact")}
-          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full p-2 flex flex-col lg:flex-row items-center gap-2 justify-center text-sm card"
+          className="cursor-pointer hover:bg-background/50 hover:text-foreground rounded-full sm:px-10 sm:py-2 lg:px-2 lg:py-2 flex flex-row items-center gap-2 justify-center text-sm card"
         >
           <div className="glow"></div>
           <span className="text-foreground">

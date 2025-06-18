@@ -21,11 +21,11 @@ export default function Banner() {
         data-aos="fade-up"
         data-aos-duration="1100"
         id="about"
-        className=" w-[95%] md:w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
+        className=" w-[95%] md:w-[95%] lg:w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
       >
         <CardContainer className=" inter-var w-full h-full">
           <CardBody className="block bg-background relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">
-            <div className="grid grid-cols-1 md:grid-cols-[55%_auto] lg:grid-cols-2 justify-evenly  relative h-auto w-full ">
+            <div className="grid grid-cols-1  md:grid-cols-[58%_auto] lg:grid-cols-2 justify-evenly md:justify-between  relative h-auto w-full ">
               <CardItem
                 data-aos="fade-right"
                 data-aos-duration="1100"

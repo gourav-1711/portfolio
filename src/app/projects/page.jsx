@@ -1,14 +1,20 @@
-import React from "react";
-
-
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function page() {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className="container">
-        <h1 className="text-4xl font-bold text-center ">
-          Projects
-        </h1>
-        <FocusCardsDemo />
+        <h1 className="text-4xl font-bold text-center pb-10">Projects</h1>
+        <div data-aos="fade-up" data-aos-durartion="1200" className="">
+          <FocusCardsDemo />
+        </div>
       </div>
     </>
   );
@@ -18,28 +24,40 @@ import { FocusCards } from "@/components/ui/focus-cards";
 export function FocusCardsDemo() {
   const cards = [
     {
-      title: "Forest Adventure",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      id: 1,
+      title: "ADMIN PANEL ",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
     {
-      title: "Valley of life",
-      src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      id: 2,
+      title: "ADMIN PANEL 2",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
     {
-      title: "Sala behta hi jayega",
-      src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      id: 3,
+      title: "ADMIN PANEL 3",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
     {
-      title: "Camping is for pros",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      id: 4,
+      title: "ADMIN PANEL 4 ",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
     {
-      title: "The road not taken",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      id: 5,
+      title: "ADMIN PANEL 5",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
     {
-      title: "The First Rule",
-      src: "https://assets.aceternity.com/the-first-rule.png",
+      id: 6,
+      title: "ADMIN PANEL 6",
+      src: "/img/projects/admin-panel (2)-main.png",
+      link: "https://admin-panel-9tak.vercel.app/"
     },
   ];
 
