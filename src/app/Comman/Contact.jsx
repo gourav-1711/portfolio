@@ -17,9 +17,8 @@ export default function Contact() {
       <div
         data-aos="fade-up"
         data-aos-duration="1100"
-        data-aos-anchor-placement="top"
         id="contact"
-        className="container p-4 w-[100%] my-10"
+        className="container p-4 w-[100%] my-10 overflow-hidden scrollHide"
       >
         <div className="   bg-white rounded-xl p-10">
           <div

@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
         className={`    ${geistSans.variable} ${geistMono.variable} antialiased scrollHide `}
       >
         <ScrollProgressBar />
-        <div className="fixed top-0 left-0 w-full h-full z-[-1] bg-gradient-to-t from-zinc-400 from-0% via-zinc-500 via-50% to-primary2 to-100% main-container"></div>
+        <div className="fixed top-0 left-0 w-full h-[110vh] z-[-1] bg-gradient-to-t from-zinc-400 from-0% via-zinc-500 via-50% to-primary2 to-100% "></div>
         <Header />
-        <div className="overflow-x-hidden scrollHide w-full ">{children}</div>
+        {children}
         <Footer />
       </body>
     </html>

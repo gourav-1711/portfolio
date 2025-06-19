@@ -49,7 +49,7 @@ export default function Header() {
             <div
               onClick={() => {
                 window.open(
-                  "https://www.linkedin.com/in/gaurav-dadhich-92a571353/?trk=opento_sprofile_topcard"
+                  "https://www.linkedin.com/in/gaurav-dadhich-92a571353/"
                 );
               }}
               // href={"https://www.linkedin.com/in/gaurav-dadhich-92a571353/?trk=opento_sprofile_topcard"}

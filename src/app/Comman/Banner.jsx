@@ -21,7 +21,7 @@ export default function Banner() {
         data-aos="fade-up"
         data-aos-duration="1100"
         id="about"
-        className=" w-[95%] md:w-[95%] lg:w-full mb-10 mt-4 max-w-[1200px]   mx-auto "
+        className=" w-[95%] md:w-[95%] lg:w-full mb-10 mt-4 max-w-[1200px]   mx-auto  "
       >
         <CardContainer className=" inter-var w-full h-full">
           <CardBody className="block bg-background relative group/card   border-black/[0.1] h-auto w-full rounded-xl p-6 border  ">

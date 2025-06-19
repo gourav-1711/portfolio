@@ -18,7 +18,7 @@ export default function Skills() {
       <div
         data-aos="fade-up"
         data-aos-duration="1100"
-        className=" container"
+        className=" container  scrollHide overflow-hidden"
         id="skills"
       >
         {/* <SkillsCard /> */}
