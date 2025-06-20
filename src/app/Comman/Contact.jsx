@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Contact() {
   useEffect(() => {
@@ -11,6 +12,12 @@ export default function Contact() {
       once: true,
     });
   }, []);
+
+
+  const [name, setName] = useState("")
+  const [body, setBody] = useState("")
+
+
 
   return (
     <>
@@ -35,7 +42,7 @@ export default function Contact() {
             <div
               data-aos="fade-up-left"
               data-aos-duration="1200"
-              className="bg-background p-5 rounded-md shadow-2xl w-[100%] md:w-[60%] "
+              className="bg-background p-5 rounded-md shadow-2xl w-[100%] md:w-[70%] lg:w-[60%] "
             >
               <form action="">
                 <div className="space-y-4">
@@ -44,6 +51,8 @@ export default function Contact() {
                       type="text"
                       id="name"
                       className="block py-2.5 px-1 w-full text-sm text-black bg-transparent border-1 rounded-md border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer "
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       placeholder=" "
                     />
                     <label
@@ -74,6 +83,8 @@ export default function Contact() {
                       id="name"
                       className="block py-1.5 px-1 w-full text-sm text-black bg-transparent border-1 rounded-md border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer resize-none"
                       placeholder=" "
+                      value={body}
+                      onChange={(e) => setBody(e.target.value)}
                     />
                     <label
                       htmlFor="name"
@@ -82,10 +93,16 @@ export default function Contact() {
                       Message
                     </label>
                   </div>
-                  <Button type="submit">Submit</Button>
+                  <Link href={`mailto:gouravdadhich34@gmail.com?subject=${name}&body=${body}`} className="btn">Submit</Link>
                 </div>
               </form>
             </div>
+          </div>
+          <div className="pt-4">
+            <p className="text-md font-medium text-gray-700">
+              My Email : <span> </span>
+              <Link href={`mailto:gouravdadhich34@gmail.com?subject=${name}&body=${body}`} className="text-primary click">gouravdadhich34@gmail.com</Link>
+            </p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
     onMouseEnter={() => setHovered(index)}
     onMouseLeave={() => setHovered(null)}
     className={cn(
-      "rounded-lg relative  overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out ",
+      "rounded-lg relative  overflow-hidden h-60 md:h-96 w-[350px] md:w-full transition-all duration-300 ease-out flex justify-center",
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
     )}
   >
@@ -19,11 +19,11 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
       height={400}
       src={card.src}
       alt={card.title}
-      className="object-cover absolute inset-0 h-full object-top-left"
+      className="object-cover absolute inset-0 h-full object-top-left rounded-lg"
     />
     <div
       className={`block lg:hidden absolute top-[40%] left-[40%] bg-background/50 font-bold shadow-2xl rounded-full px-2 py-[1px] ${
-        hovered === index ? "opacity-0" : "opacity-100"
+        hovered === index ? "opacity-0 invisible" : "opacity-100 visible"
       } `}
     >
       Click To View
@@ -76,7 +76,7 @@ export function FocusCards({ cards }) {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  mx-auto justify-center md:px-8 w-full ">
       {cards.map((card, index) => (
         <Card
           key={card.title}
