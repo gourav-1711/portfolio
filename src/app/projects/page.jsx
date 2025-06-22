@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FocusCards } from "@/components/ui/focus-cards";
+import { ArrowBigRight, ArrowRight, ArrowRightIcon } from "lucide-react";
 
 
 export default function page() {
@@ -47,7 +48,7 @@ export default function page() {
     const totalScroll = horizontal.scrollWidth - window.innerWidth;
 
     gsap.to(horizontal, {
-      x: -scrollLength -300 ,
+      x: -scrollLength - 300,
       ease: 'none',
       scrollTrigger: {
         trigger: element,
@@ -56,7 +57,7 @@ export default function page() {
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        markers:true,
+        markers: true,
       },
     });
   }, [])
@@ -64,17 +65,18 @@ export default function page() {
 
   return (
     <>
-    <div className="bg-black container block md:hidden">
-            <h3 className="main-title ">My Projects</h3>
-          </div>
-      <div className="container grid md:grid-cols-[25%_auto]   overflow-hidden ">
-        <div className="text-4xl font-bold text-center hidden md:block pb-10 h-[50vh] md:h-screen "> 
-          <div className="bg-black">
-            <h3 className="main-title ">My Projects</h3>
+      <div className=" fixed top-0 left-0 -z-[1] w-full h-screen bg-white">
+        
+      </div>
+
+      <div className="max-w-[1200px] w-[95%] md:w-full mx-auto    overflow-hidden bg-black rounded-2xl mb-5  ">
+        <div className="text-4xl font-bold text-center   ">
+          <div className="">
+            <h3 className="main-title flex items-center "><span>My Projects</span><span><ArrowRightIcon color="white" /></span></h3>
           </div>
         </div>
-        <div ref={sectionRef}  className="horizontal-section h-screen ">
-          <div ref={horizontalRef} className="horizontal-container  w-max h-full">
+        <div ref={sectionRef} className="horizontal-section h-screen overflow-hidden ps-10 flex items-center ">
+          <div ref={horizontalRef} className="horizontal-container  w-max h-full flex items-center">
             <FocusCardsDemo />
           </div>
 
