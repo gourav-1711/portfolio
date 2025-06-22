@@ -118,3 +118,21 @@
   }
 }
 /* end here */
+
+.main-title {
+  font-weight: 900;
+  background: linear-gradient(45deg, #00f5ff, #ff006e, #ffbe0b);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+  padding: 20px 0px;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

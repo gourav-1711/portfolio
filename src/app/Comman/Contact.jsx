@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+
 
 export default function Contact() {
   useEffect(() => {
@@ -19,15 +19,17 @@ export default function Contact() {
 
 
 
+
   return (
     <>
       <div
         data-aos="fade-up"
         data-aos-duration="1100"
         id="contact"
-        className="container p-4 w-[100%] my-10 overflow-hidden scrollHide"
+        className="pinnedContact scrollShadow container px-4  w-[100%] my-20 overflow-hidden scrollHide"
       >
         <div className="   bg-white rounded-xl p-10">
+          {/* text */}
           <div
             data-aos="fade-up-right"
             data-aos-duration="1200"
@@ -38,7 +40,13 @@ export default function Contact() {
               <ArrowRight strokeWidth={2.25} size={36} />
             </span>
           </div>
+          {/*  */}
           <div className="flex justify-center">
+            {/* glass card */}
+            {/* <div className="">
+              <GlassCard/>
+            </div> */}
+            {/* form */}
             <div
               data-aos="fade-up-left"
               data-aos-duration="1200"
@@ -98,6 +106,7 @@ export default function Contact() {
               </form>
             </div>
           </div>
+          {/* email */}
           <div className="pt-4">
             <p className="text-md font-medium text-gray-700">
               My Email : <span> </span>

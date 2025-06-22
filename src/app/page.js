@@ -1,24 +1,31 @@
-"use client"
+"use client";
 import Banner from "./Comman/Banner";
 import Contact from "./Comman/Contact";
 import Skills from "./Comman/Skills";
 import { useEffect } from "react";
-export default function Home() {
 
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
+export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
       {/* banner */}
-      <Banner />
-
+      <section className="pinned">
+        <Banner />
+      </section>
       {/* skills */}
 
-      <Skills />
+      <section className="overlap-section">
+        <Skills />
+      </section>
 
-      <Contact />
+      <section className="overlap-section">
+        <Contact />
+      </section>
+
+     
     </>
   );
 }

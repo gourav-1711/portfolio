@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import SkillBar from "./SkillBar";
 
 export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
   const [active, setActive] = useState(0);
@@ -84,9 +85,8 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     width={500}
                     height={500}
                     draggable={false}
-                    className={`h-full w-full rounded-3xl object-contain  ${
-                      testimonial.invert ? "invert-100" : ""
-                    }`}
+                    className={`h-full w-full rounded-3xl object-contain  ${testimonial.invert ? "invert-100" : ""
+                      }`}
                   />
                 </motion.div>
               ))}
@@ -123,7 +123,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+            <motion.div className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -147,8 +147,25 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                   {word}&nbsp;
                 </motion.span>
               ))}
-            </motion.p>
+              <motion.span
+                initial={{
+                  filter: "blur(50px)",
+                  opacity: 0,
+                  y:30,
+                }}
+                animate={{
+                  filter: "blur(0px)",
+                  opacity: 1,
+                  y:0,
+                  
+                }}
+                data-aos="fade-up"
+                className="mt-20">
+                <SkillBar percentage={testimonials[active].progress} name={testimonials[active].name} />
+              </motion.span>
+            </motion.div>
           </motion.div>
+
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}

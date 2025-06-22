@@ -13,12 +13,14 @@ export default function Skills() {
     });
   });
 
+
+
   return (
     <>
       <div
         data-aos="fade-up"
         data-aos-duration="1100"
-        className=" container  scrollHide overflow-hidden"
+        className=" pinnedSkill scrollShadow container  scrollHide overflow-hidden"
         id="skills"
       >
         {/* <SkillsCard /> */}
@@ -48,6 +50,7 @@ export function AnimatedTestimonialsDemo() {
       name: "Next.Js",
       designation: "A FullStack React FrameWork",
       src: "/img/skills/nextjs.svg",
+      progress: 45 ,
       invert: true,
     },
     {
@@ -55,12 +58,16 @@ export function AnimatedTestimonialsDemo() {
         "Proficient in React for building dynamic and responsive user interfaces using components, hooks, and state management.",
       name: "React Js",
       designation: "A JavaScript Library",
+      progress: 95 ,
+
       src: "/img/skills/React.png",
     },
     {
       quote:
         "Strong understanding of JavaScript, including ES6+, DOM manipulation, and asynchronous programming.",
       name: "Java Script",
+      progress: 100 ,
+
       designation: "A Programming Language Built To Make Website",
       src: "/img/skills/Java-Script.png",
     },
@@ -68,6 +75,8 @@ export function AnimatedTestimonialsDemo() {
       quote:
         "Advanced in Tailwind CSS, skilled at building fully responsive and customizable UI with utility-first approach.",
       name: "Tailwind",
+      progress: 100 ,
+
       designation: "A Utility Css Framwork",
       src: "/img/skills/Tailwind.png",
     },
@@ -75,6 +84,8 @@ export function AnimatedTestimonialsDemo() {
       quote:
         "Proficient in Bootstrap for creating responsive and mobile-first web designs efficiently.",
       name: "Bootstrap",
+      progress: 98 ,
+
       designation: "A HTML , Css , JS Library",
       src: "/img/skills/bootstrap.png",
     },
@@ -82,6 +93,8 @@ export function AnimatedTestimonialsDemo() {
       quote:
         "Advanced in CSS, with in-depth knowledge of layouts , animations, transitions, and creating responsive, cross-browser compatible designs.",
       name: "Css",
+      progress: 100 ,
+
       designation: "CSS is a language used to style and layout web pages.",
       src: "/img/skills/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent.png",
     },
@@ -89,6 +102,8 @@ export function AnimatedTestimonialsDemo() {
       quote:
         "Advanced in HTML with strong knowledge of semantic tags, accessibility, and SEO-friendly structure.",
       name: "HTML",
+      progress: 100 ,
+
       designation: "HTML is used to create and structure the web.",
       src: "/img/skills/HTMl.png",
     },

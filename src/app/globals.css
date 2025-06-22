@@ -213,6 +213,9 @@ input:-webkit-autofill:active {
 .click {
   @apply cursor-pointer;
 }
+.min-w-screen {
+  min-width: 100vw;
+}
 
 
 .scrollHide::-webkit-scrollbar {
