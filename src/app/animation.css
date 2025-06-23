@@ -174,21 +174,4 @@
     transform: rotate(360deg);
   }
 }
-/* /////////////////////// */
-
-.bgBlackWhite {
-  background: #EEAECA;
-background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-}
-.bgNew{
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-}
-
-.glass{
-  
-  background-color: cyan;
-  background-clip: padding-box;
-  backdrop-filter: blur(4px) saturate(0%) contrast(125%);
-  opacity: 20%;
-
-}
+/* ///////////////// */
