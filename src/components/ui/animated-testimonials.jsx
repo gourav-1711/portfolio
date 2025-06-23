@@ -80,7 +80,8 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                   className="absolute inset-0 origin-bottom bg-gradient-to-r from-[#0f172a]  to-[#334155]  rounded-3xl p-16"
                 >
                   <Image
-                    src={testimonial.src}
+      
+                    src={testimonial.src  }
                     alt={testimonial.name}
                     width={500}
                     height={500}

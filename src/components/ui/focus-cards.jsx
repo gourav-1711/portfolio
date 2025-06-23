@@ -11,7 +11,7 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
     onMouseEnter={() => setHovered(index)}
     onMouseLeave={() => setHovered(null)}
     className={cn(
-      "rounded-lg relative  overflow-hidden min-w-[100vw] sm:min-w-[90vw] md:min-w-[40vw] h-[80vh] flex-shrink-0 transition-all duration-300 ease-out flex justify-center shadow-2xl ",
+      "rounded-lg relative  overflow-hidden min-w-[100vw] sm:min-w-[90vw] md:min-w-[40vw] h-[80vh] flex-shrink-0 transition-all duration-300 ease-out flex justify-center shadow-2xl  ",
       hovered !== null && hovered !== index && "blur-[4px] scale-[0.90] ",
       hovered !== null && hovered == index && " scale-[1.01] saturate-[1.05] z-[99999]"
     )}
@@ -25,11 +25,13 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
       className="  absolute inset-0 h-full w-full object-center rounded-lg"
     />
     <div
-      className={`block lg:hidden absolute top-[40%] left-[40%] bg-background/50 font-bold shadow-2xl rounded-full px-2 py-[1px] ${
+      className={`block lg:hidden absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-foreground/50 font-bold shadow-2xl rounded-full px-2 py-[1px] ${
         hovered === index ? "opacity-0 " : "opacity-100 "
       } `}
     >
+      <span className=" flex justify-center items-center">
       Click To View
+      </span>
     </div>
     <div
       className={cn(

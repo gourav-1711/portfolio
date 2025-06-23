@@ -65,18 +65,16 @@ export default function page() {
 
   return (
     <>
-      <div className=" fixed top-0 left-0 -z-[1] w-full h-screen bg-white">
-        
-      </div>
+      <div className="fixed top-0 left-0 -z-[1] w-full h-screen bg-[#cbcbcb] bg-[url('/img/photo-ground-texture-pattern.jpg')] bg-no-repeat  bg-cover opacity-50 "></div>
 
-      <div className="max-w-[1200px] w-[95%] md:w-full mx-auto    overflow-hidden bg-black rounded-2xl mb-5  ">
+      <div className="max-w-[1200px] w-[95%] md:w-full mx-auto   bg-gradient-to-br from-[#1a1a1a]/80 via-[#2a2a2a]/80 to-[#1a1a1a]/80 overflow-hidden  rounded-2xl mb-5  ">
         <div className="text-4xl font-bold text-center   ">
           <div className="">
-            <h3 className="main-title flex items-center "><span>My Projects</span><span><ArrowRightIcon color="white" /></span></h3>
+            <h3 className="main-title flex items-center sticky top-0 "><span>My Projects</span><span><ArrowRightIcon color="white" /></span></h3>
           </div>
         </div>
-        <div ref={sectionRef} className="horizontal-section h-screen overflow-hidden ps-10 flex items-center ">
-          <div ref={horizontalRef} className="horizontal-container  w-max h-full flex items-center">
+        <div ref={sectionRef} className="horizontal-section h-screen overflow-hidden ps-10 flex items-center snap-x snap-mandatory  ">
+          <div ref={horizontalRef} className="horizontal-container  w-max h-full flex items-center  ">
             <FocusCardsDemo />
           </div>
 
